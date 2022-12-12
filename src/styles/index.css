@@ -1,0 +1,125 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Lato',sans-serif ;
+    font-weight: 400;
+    color:#777;
+    line-height: 1.7;
+    font-size: 16px;
+    padding:25px;
+    
+}
+.header{
+ background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8),rgba(40, 180, 131, 0.8)  ),url('../img/hero.jpg');
+ background-size:cover;
+ min-height: 90vh;
+background-position: top;
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+position: relative;
+}
+.logo-box{
+    position:absolute;
+    top:40px;
+    left:40px;
+}
+.logo{
+    height:35px;
+}
+.heading-box{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.primary-heading{
+    color:#fff;
+    text-transform: uppercase;
+}
+.heading-sub{
+font-weight: 700;
+font-size:20px;
+display: block;
+letter-spacing: 17.4px;
+animation: moveInRight 1s ease-out;
+}
+.heading-main{
+font-weight: 400;
+font-size:60px;
+letter-spacing: 35px;
+display: block;
+animation: moveInLeft 1s ease-out;
+}
+@keyframes moveInLeft{
+    0%{
+    opacity: 0;
+    transform: translate(-100px);
+    }
+80%{
+    transform: translate(10px);
+}
+100%{
+    opacity: 1;
+    transform: translate(0);
+}
+}
+@keyframes moveInRight{
+    0%{
+    opacity: 0;
+    transform: translate(100px);
+    }
+80%{
+    transform: translate(-10px);
+}
+100%{
+    opacity: 1;
+    transform: translate(0);
+}
+}
+@keyframes moveBottom{
+    0%{
+        opacity:0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.discover-btn{
+color:#777;
+background-color: #fff;
+display: inline-block;
+text-decoration: none;
+padding:15px 40px;
+border-radius: 100px;
+text-transform: uppercase;
+transition:all .2s;
+margin-top: 45px;
+position:relative;
+animation: moveBottom .4s ease-out .7s backwards;
+
+}
+.discover-btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgb(0, 0, 0,.2);
+}
+.discover-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px  rgb(0, 0, 0,.2);
+}
+.discover-btn:visited{
+    transition:all .2s;
+}
